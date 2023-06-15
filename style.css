@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@300;400;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;;
+}
+
+.row1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #f0ecfb;
+}
+
+.purple {
+    color:#7342d6;
+}
+
+html {
+    scroll-behavior: smooth;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+/*################################################*/
+/* spinner for the loading state */
+
+.books_loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: calc(40vh);
+    font-size: 60px;
+    color: #7342d6;
+}
+
+.books_loading--spinner {
+    display: none !important;
+}
+
+.books_loading .books_loading--spinner {
+    display: block !important;
+}
+
+
+.fa-spinner {
+    animation: rotate 600ms infinite linear;
+    margin: 0 auto;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*################################################*/
+/* navigation bar */
+
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.logo_img {
+    height: 60px;
+    width: 160px;
+}
+
+.nav_container ul li {
+    list-style-type: none;
+    margin: 0px 24px;
+}
+
+.nav_container a {
+    text-decoration: none;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #7342d6;
+}
+
+.right_nav {
+    display: flex;
+}
+
+.nav_special {
+    border: 3px solid #7342d6;
+    border-radius: 5px;
+}
+
+/*################################################*/
+/* burger menu */
+
+.btn__menu {
+    background-color: transparent;
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    color: #6415ff;
+    display: none;
+    cursor: pointer;
+}
+
+.menu__backdrop {
+    border: 0.5px solid lightgray;
+    position: absolute;
+    background-color: white;
+    top: 3%;
+    right: 2%;
+    left: 50%;
+    bottom: 45%;
+    z-index: 100;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+    margin-top: 20%;
+}
+
+.menu__list {
+    padding: 16px 0px;
+    list-style-type: none;
+}
+
+.menu__link {
+    font-size: 18px;
+    color: #263346;
+}
+
+.btn__menu--close {
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    color: #6415ff;
+    cursor: pointer;
+}
+
+.btn_books {
+    border: 3px solid #7342d6;
+    border-radius: 5px;
+}
+
+
+/*################################################*/
+/* landing page */
+
+#section1 {
+    height: calc(100vh + 14vh);
+}
+.container1 {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container1 h1 {
+    color: #7342d6;
+    font-size: 56px;
+    width: 40rem;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.container1 h3 {
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.container1 button{
+    font-size: 20px;
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: none;
+    background-color: #7342d6;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+    margin-bottom: 24px; 
+}
+
+.container1 button a {
+    color: white;
+}
+
+.container1 figure {
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+}
+.container1 img {
+    height: 100%;
+    max-height: 540px;
+    
+}
+
+/*################################################*/
+/* wave svg between the sections */
+
+.wave1 {
+    width: 100vw;
+    height: calc(100vh / 3);
+    z-index: -1;
+}
+
+.wave2 {
+    width: 100vw;
+    height: calc(100vh / 3);
+}
+
+.wave1 img {
+    width: 100vw;
+    background-size: cover;
+    z-index: -1;
+}
+
+.wave2 img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scaleX(-1) rotateX(180deg);
+}
+
+
+/*################################################*/
+/* section 2 */
+
+#section2 {
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh / 3);
+    width: 100vw;
+    background-color: white;
+}
+
+.container2 h3 {
+    margin: 0 auto;
+    font-size: 32px;
+    margin-bottom: 42px;
+}
+
+.features {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+
+.card {
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.card p {
+    width: 20rem;
+}
+
+.logoo {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #7342d6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #7342d6;
+    font-size: 32px;
+    border-radius: 5px;
+    margin-bottom:24px;
+}
+
+/*################################################*/
+/* section 3 */
+
+#section3 {  
+    margin-top: 20vh;
+}
+
+.container3 h3 {
+    font-size: 32px;
+    margin: 64px 0px;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.book {
+    width: calc(100% / 4);
+    margin-bottom: 42px;
+}
+
+.book img {
+    border-radius: 5px;
+    height: 380px;
+    object-fit: cover;
+    transition: all 300ms ease;
+}
+
+.book img:hover {
+    scale: 1.055;
+    transition: all 300ms ease;
+}
+
+.book h6 {
+    margin: 8px 0px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.book_rating {
+    margin: 8px 0px;
+    font-size: 20px;
+    font-weight: 400;
+    color: gold;
+}
+
+.prices {
+    display: flex;
+}
+
+.discount p {
+    font-size: 18px;
+    color: lightgrey;
+    text-decoration: line-through;
+}
+
+.current_price p {
+    margin-left: 12px;
+    font-size: 18px;
+}
+
+
+/*################################################*/
+/* section 4 */
+
+#section4 {
+    margin: 100px 0px;
+    background-color: white;
+}
+
+.container4 h3 {
+    font-size: 32px;
+    width: 100%;
+    text-align: center;
+    margin: 64px 0px;
+    padding-top: 64px;
+}
+
+
+/*################################################*/
+/* section 5 */
+
+.container5 {
+    text-align: center;
+}
+
+.container5 h1 {
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.container5 button {
+    font-size: 20px;
+    padding: 12px 24px;
+    color: white;
+    background-color: #7342d6;
+    font-weight: 400;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 64px;
+}
+
+.container5 button a {
+    color:  white;
+}
+
+/*################################################*/
+/* footer */
+
+footer {
+    background-color: #242424;
+    padding: 64px 0px;
+}
+
+.container6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom_logo {
+    width: 160px;
+    fill: white;
+    color: white;
+}
+
+.links ul{
+    display: flex;
+    justify-content: space-between;
+    width: 130%;
+    list-style-type: none;
+    margin: 24px 0px;
+    position: relative;
+    right: 32px;
+}
+
+.links ul li a{
+    margin-left: 16px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.links ul li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.container6 p {
+    color: white;
+    font-size: 16px;
+}
+
+/*############################################################
+##############################################################
+##############################################################
+##############################################################
+*/
+/* responsive design for phones */
+
+@media (max-width: 768px)
+{
+    /*  burger menu*/
+    .right_nav {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+    /*##############################*/
+
+    body {
+        padding: 0px 12px;
+    }
+
+    .nav {
+        margin-top: 24px;
+    }
+
+    /*######################################*/
+    /* section 1 */
+
+    .container1 h1 {
+        font-size: 36px;
+        width: 25rem;
+        margin-top: 36px;
+    }
+
+    .container1 h3 {
+        text-align: center;
+        font-size: 24px;
+        margin-top: 18px;
+    }
+
+    .container1 img {
+        width: 100%;
+        margin-top: 18px;
+        height: 400px;
+    }
+
+    .container1 button {
+        margin-top: 24px;
+    }
+
+    /*######################################*/
+    /* section 2 */
+
+    .wave1, .wave2 {
+        display: none;
+    }
+
+    .container2 {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .container2 h3 {
+        font-size: 24px;
+        margin-top: 32px;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        margin-bottom: 24px;
+    }
+
+    .card h4 {
+        margin-bottom: 12px;
+    }
+
+    /*######################################*/
+    /* section 3 */
+
+    .container3 h3 {
+        font-size: 24px;
+    }
+
+    .books {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .book {
+        width: 100%;
+        text-align: center;
+    }
+
+    .book .prices {
+        justify-content: center;
+    }
+
+}
+
+
+/*############################################################
+##############################################################
+##############################################################
+##############################################################
+/* styles for books.html  */
+
+.filter_selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.books_container h3 {
+    text-align: center;
+    font-size: 32px;
+    margin: 32px 0px;
+}
+
+#filter {
+    font-size: 16px;
+    padding: 12px 24px;
+    margin-right: 12px;
+    border-radius: 5px;
+    border: 2px solid #7342d6;
+}
+

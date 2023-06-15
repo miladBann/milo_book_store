@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ec3d9b334f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <nav>
+        <div class="row1">
+            <div class="nav_container">
+                <ul>
+                    <li>
+                        <img src="./assets/Library.svg" alt="logo_img" class="logo_img">
+                    </li>
+                </ul>
+
+                <ul>
+                    <div class="right_nav">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="index.html" class="nav_special">Store</a></li>
+                    </div>
+                </ul>
+
+                <button class="btn__menu" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+    
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="menu__list"><a href="" class="menu__link" onclick="closeMenu()">Home</a></li>
+                        <li class="menu__list"><a href="" class="menu__link" onclick="closeMenu()">Contact</a></li>
+                        <li class="menu__list"><a href="" class="menu__link" onclick="closeMenu()">About</a></li>
+                        <li class="menu__list"><a href="" class="menu__link" onclick="closeMenu()">Prices</a></li>
+                        <li class="menu__list"><a href="index.html" class="menu__link btn_books" onclick="closeMenu()">Store</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+
+        <section id="books">
+            <div class="row1">
+                <div class="books_container">
+
+                    <div class="filter_selector">
+                        <h3>All<span class="purple"> Books</span></h3>
+
+                        <select id="filter" onchange="filterBooks(event)">
+                            <option value="" disabled selected>Sort</option>
+                            <option value="LOW_TO_HIGH"> Price, Low to High</option>
+                            <option value="HIGH_TO_LOW"> Price, High to Low</option>
+                            <option value="RATING">Rating</option>
+                        </select>
+                    </div>
+
+                    <div class="books books_loading">
+                        <!--this is where javascript renders the books-->
+                        <i class="fas fa-spinner books_loading--spinner"></i>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="row1">
+                <div class="container6">
+                    <figure>
+                        <a href=""><img src="./assets/Library.svg"  class="bottom_logo" alt=""></a>
+                    </figure>
+
+                    <div class="links">
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Books</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <p>Copyright © 2021 Library</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+
+    <script src="books.js"></script>
+</body>
+</html>
